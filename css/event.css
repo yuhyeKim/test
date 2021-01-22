@@ -23,6 +23,7 @@ img {display: block;}
 }
 
 .event_contents {height: 0; opacity: 0; overflow: hidden;}
+.event_contents.action {height: auto; opacity: 1; overflow: auto;}
 .event_contents.animation {animation: eventContentsAni 1s ease-out forwards;}
 @keyframes eventContentsAni {
     0% {transform: translateY(-300px); opacity: 0; height: 0;}
