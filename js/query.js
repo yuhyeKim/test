@@ -17,7 +17,7 @@ $(function () {
         $(".event_contents").removeClass("animation").addClass("action");
         // 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
         html2canvas(document.querySelector("#capture")).then(canvas => {
-            saveAs(canvas.toDataURL('image/png'), "capture-test.png");
+            saveAs(canvas.toDataURL('image/png'), "stest.png");
         });
     });
 
