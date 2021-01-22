@@ -1,0 +1,152 @@
+/* common */
+html {
+    font-size: 100%;
+	font-weight:400;
+    color: #444444
+}
+html,
+html body {
+    height: 100%; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.document {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 100%;
+    height: 100%;
+}
+.area {
+    position: relative;
+	min-height:100%;
+	height:100%
+}
+.hidden {display: none;}
+
+
+button,
+input {
+    line-height: normal;
+    *overflow: visible; 
+}
+
+button {
+    color:inherit;
+    padding:0;
+    border:0;
+    background-color:transparent;
+    outline:transparent; 
+}
+button, input, select, textarea {
+	font-family:inherit;
+	vertical-align: baseline;
+    *vertical-align: middle;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button; 
+}
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; 
+}
+input[type="number"],
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none; 
+}
+
+button::-moz-focus-inner, 
+input::-moz-focus-inner {border:0;padding:0}
+textarea {overflow:auto;vertical-align:top;resize: vertical}
+input:invalid, 
+textarea:invalid {border-color:#C82E2D;}
+button[disabled], 
+input[disabled] {cursor:default;opacity: 0.5}
+input::-ms-clear {display: none;}
+table {border-collapse: collapse;border-spacing:0;}
+td {vertical-align: top;}
+h1, h2, h3, h4, h5, h6 {font-size:inherit;font-weight:inherit;margin:0}
+i, address, em {font-style: normal;}
+img {width:100%}
+
+
+
+/* 하단 고정메뉴 */
+.bottom_check_area {
+	text-align:center;
+	height:40px;
+	line-height:40px
+}
+.bottom_check_area input[type="checkbox"] {
+    display:none;
+}
+.bottom_check_area input[type="checkbox"] + label {
+	display:inline-block;
+	cursor:pointer; 
+	font-size:14px;
+}
+.bottom_check_area input[type="checkbox"] + label span {
+	display:inline-block;
+	width:16px;
+	height:16px;
+	margin:0 10px -3px 0;
+    background:url(../images/event/icon_checkbox.png) no-repeat 0 0;
+	background-size:auto 16px;
+}
+.bottom_check_area input[type="checkbox"]:checked + label span {
+    background:url(../images/event/icon_checkbox.png) no-repeat right 0;
+	background-size:auto 16px;
+}
+.bottom_check_area .btn_this_close {
+	font-size:14px;
+	margin-left:40px
+}
+
+.bottom_menu {
+	position:fixed;
+	width:100%;
+	height:50px;
+	text-align:center;
+	left:0;
+	bottom:0px;
+	background:#fff;
+	border-top:1px solid #dbd1d1;
+	z-index:10
+}
+.bottom_menu button {
+	display:inline-block;	
+	width:80px;
+	height:50px;
+	text-indent:-9999em;
+}
+.bottom_menu button.ative {
+	opacity:0.8
+}
+.bottom_menu button.btn_go_top {
+	background:url(../images/common/btn_go_top.png) no-repeat 50% 50%;
+	background-size:20px auto
+}
+.bottom_menu button.btn_go_refresh {
+	background:url(../images/common/btn_go_refresh.png) no-repeat 50% 50%;
+	background-size:20px auto
+}
+.bottom_menu button.btn_go_close {
+	background:url(../images/common/btn_go_close.png) no-repeat 50% 50%;
+	background-size:20px auto
+}
