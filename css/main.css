@@ -97,7 +97,7 @@
 .popup_contents_name {font-weight: 600; min-width: 70px; text-align: left; line-height: 2;}
 .popup_contents_result {line-height: 2; text-align: left;}
 #personal_info_aree + label + a {display: inline-block; color: #fff; font-size: 15px; border-bottom: solid 1px #fff;}
-input[id="personal_info_aree"] + label {display: inline-block; width: 15px; height: 15px; border: solid 1px #ddd; color: #fff; margin-right: 6px; vertical-align: -4px; border-radius: 2px; background-color: #fff;}
+input[id="personal_info_aree"] + label {display: inline-block; width: 15px; height: 15px; border: solid 1px #ddd; color: #fff; margin-right: 6px; vertical-align: -4px; border-radius: 2px; background-color: #fff; outline: none;}
 input[id="personal_info_aree"]:checked + label {background: #fff url("../images/check.png") no-repeat center/cover;}
 
 .popup_ment {font-weight: 900; padding-top: 10px; color: #f00;}
