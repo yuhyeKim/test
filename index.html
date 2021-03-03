@@ -2,201 +2,596 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>오잉 2020 연말결산</title>
-<!--    <link rel="stylesheet" href="css/include.css" />-->
+    <title>오잉회원 감사 핫딜!</title>
+    <link rel="stylesheet" href="css/include.css" />
     <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.1.9.2.min.js"></script>
-    <script type="text/javascript" src="js/html2canvas.min.js"></script>
     <script type="text/javascript" src="js/query.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 
 <body>
-    <div class="event_wrap" id="capture">
 
-        <!-- ******************************************************** BANNER *********************************************************** -->
+    <!-- ************************************************** MAIN ***************************************************************-->
 
-        <section class="banner_top_area">
-            <img src="images/event/2020_banner.png" alt="2020 연말결산">
-        </section>
-        <section class="banner_txt_area">
-            <div class="banner_txt_box">
-                <p class="banner_txt animation">
-                    우여곡절이 많았던 2020년,
-                    오잉을 애용해 주시는 회원님들 덕분에 따뜻한
-                    한 해를 보낼 수 있었어요.<br>
-                    <br>
-                    지난 2020년울 되돌아보며
-                    여러분과 더 따뜻하게 소통할 2021년을 기대할게요
-                    새해에도 우리 함께 오잉을 만들어가요.<br>
-                    <br>
-                    그런 의미에서 그동안 활동해주신 여러분의 활동을
-                    숫자로 간단하게 요약해 봤어요.<br>
-                    <br>
-                    시작해 볼까요?
+    <div class="wrap">
+        <section class="top_banner_wrap">
+            <img class="top_banner_img" src="images/banner.jpg" alt="오잉 회원 감사 핫딜 AirPods Pro">
+            <div class="top_banner_txt_area">
+                <h1 class="top_banner_title">에어팟 프로 AirPods Pro</h1>
+                <p class="top_banner_txt">응모기간 : 3월10일 11:00 – 3월15일 11:00<small>( 당첨자 발표 : 3월16일 11:00 )</small></p>
+                <img class="top_banner_draw" src="images/draw.png" alt="추첨 10명">
+                <p class="top_banner_price">
+                    <small>329,000원</small><br>
+                    <b>오잉?!</b> 핫딜가 <strong>\52,000원</strong>
                 </p>
-                <a id="button_start" class="animation" href="#">시 작 하 기</a>
             </div>
         </section>
 
-        <!-- //////////////////////////////////////////////// EVENT CONTENTS START ////////////////////////////////////////////////////////////////// -->
-        
-        <div class="event_contents">
-            <section class="user_profile_area">
-                <div class="user_profile_box">
-                    <div id="user_img"></div>
-                    <div id="user_id">User_ID1234</div>
-                </div>
-            </section>
-            <section>
-                <img src="images/event/2020_1.png" alt="배경이미지1">
-            </section>
-            <section class="user_info_area num1">
-                <h1 class="user_info_title">
-                    우리가 함께한지.....<br>
-                    <strong><span id="user_today">12345</span>일</strong>
-                </h1>
-                <p class="user_info_txt">
-                    지난 해 오잉에서 만난 친구들과의 소통으로
-                    즐거운 한 해 보내셨나요?
-                </p>
-            </section>
-            <section>
-                <img src="images/event/2020_2.png" alt="배경이미지2">
-            </section>
-            <section class="user_info_area num2">
-                <h1 class="user_info_title">
-                    내가 작성한 게시물<br>
-                    <strong><span id="user_post">999</span>개</strong>
-                </h1>
-                <p class="user_info_txt">
-                    오잉에 기록한 게시글들로 추억을 되돌아보며, 어른 들이
-                    주도하는 타 SNS의 한 귀퉁이에서 부수적인 것, 자투리
-                    컨텐츠가 아닌 친구들과 소통하는 소중 한 시간이었기를
-                    바라요
-                    <img class="emoticon" src="images/event/smile.png" alt="웃는표정 이모티콘">
-                </p>
-            </section>
-            <section>
-                <img src="images/event/2020_3.png" alt="배경이미지2">
-            </section>
-            <section class="user_info_area num3">
-                <h1 class="user_info_title">
-                    내 게시물에 받은 공감(좋아요)<br>
-                    <strong><span id="user_like_1">999</span>개</strong><br>
-                    내 게시물에 달린 댓글<br>
-                    <strong><span id="user_comment_1" class="counter">999</span>개</strong>
-                </h1>
-                <p class="user_info_txt">
-                    돌이켜보면 그동안 받은 공감과 댓글은 회원님에게 큰 힘
-                    을 북돋아 주었어요
-                    <img class="emoticon" src="images/event/smile2.png" alt="부끄러워하며 웃는 이모티콘">
-                </p>
-            </section>
-            <section>
-                <img src="images/event/2020_4.png" alt="배경이미지2">
-            </section>
-            <section class="user_info_area num4">
-                <h1 class="user_info_title">
-                    내가 공감한(좋아요) 게시물 수<br>
-                    <strong><span id="user_like_2">999</span>개</strong><br>
-                    내가 작성한 댓글<br>
-                    <strong><span id="user_comment_2">999</span>개</strong>
-                </h1>
-                <h2 class="user_info_sub_title">놀라운 나와 나를 연결하는 오잉</h2>
-                <p class="user_info_txt">
-                    회원님의 따뜻한 공감과 댓글 하나하나가 친구들에게도
-                    큰 기쁨과 위로가 되었을거에요.
-                    회원님으로 인해 변화할 우리 오잉을 기대해봐요.
-                    <img class="emoticon" src="images/event/happy.png" alt="눈감고 웃는 이모티콘"><br>
-                    <strong>코로나19가 장기화 되면서 학업과 개인 활동을 못해 소홀해졌던 친구들과의 거리를 오잉에서는 더 가깝게 연결될 수 있어요, 계속 따뜻한 소통으로 즐거움을 이어가요 <img class="emoticon" src="images/event/kiss.png" alt="뽀뽀하는 이모티콘"></strong><br>
-                </p>
-            </section>
-            <section>
-                <img src="images/event/2020_5.png" alt="배경이미지2">
-            </section>
-            <section class="user_info_area num5">
-                <h1 class="user_info_title">
-                    나와 연결된 친구<br>
-                    <strong><span id="user_friends">999</span>명</strong><br>
-                    <small>팔로워+팔로잉 수</small>
-                </h1>
-                <p class="user_info_txt">
-                    새 친구가 늘어날수록 오잉을 더 열심히 하게 되는 열정 뿜
-                    뿜인 나를 혹시 보셨나요?
-                    열정이 가득한 회원님 덕분에 오잉이 더 따뜻한 곳이 되었
-                    어요. 내년에도 우리 함께 더 따뜻하고 활발한 오잉을 만들어요!
-                </p>
-            </section>
-            <section>
-                <img src="images/event/2020_6.png" alt="배경이미지2">
-            </section>
-            <section class="user_info_area num6">
-                <h1 class="user_info_title">
-                    내가 쓴 채팅 메시지<br>
-                    <strong><span id="user_message">999</span>개</strong><br>
-                    <small>일반채팅 + 오픈채팅방 전체 메시지 수</small>
-                </h1>
-                <p class="user_info_txt">
-                    나와 같은 관심사 친구들을 수없이 만나고,
-                    가끔은 숨이 막힐 듯 벅찬 감동의 메시지들로 소통할 수 있
-                    는 곳. 오잉은 학업으로 지친 무거운 마음의 짐 은 내려놓
-                    고 잠시 쉬었다 갈 수 있는 편안한 곳 이였음 좋겠어요.
-                    소소한 고민부터 다양한 이야기까지, 오잉에서 함께해요!<br>
-                    <strong>Hoxy,</strong><br>
-                    아직 오잉이 어렵고 서툴러 친구를 많이 못 사귄 회원님들,
-                    친구찾기 또는 오픈채팅 에서 찾아 보는 건 어때요?
-                    나와 같은 학교, 나와 같은 관심사 등 다양한 친구들을 만날 수 있고 이야기 할 수 있어요.<br>
-                    <br>
-                    여러분의 글로 차곡차곡 채워지는 오잉!
-                </p>
-            </section>
+        <section class="product_info_wrap">
+            <h1 class="product_info_title">상 품 정 보</h1>
+            <table class="product_info_table">
+                <thead>
+                    <tr>
+                        <th colspan="2">필수표기정보</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>품명 및 모델명</td>
+                        <td>
+                            Apple 에어팟 프로 / MWP22KH/A / 케이스 : A2190, 오른쪽 : A2083, 왼쪽 : A2084
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>KC 인증 필 유무</td>
+                        <td>
+                            R-R-APL-A2190, R-C-APL-A2083, R-C-APL-A2084
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>출시년월</td>
+                        <td>
+                            알 수 없음 (업체미제공)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>제조자(수입자)</td>
+                        <td>
+                            애플INC(애플코리아)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>제조국</td>
+                        <td>
+                            중국
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>크기</td>
+                        <td>
+                            (박스포함)100*100*45(mm)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>무게</td>
+                        <td>
+                            (박스포함)250g
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>품질보증기준</td>
+                        <td>
+                            제품 이상 시 공정거래위원회 고시 소비자분쟁해결기준에 의거 보상합니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>A/S 책임자</td>
+                        <td>
+                            애플INC(애플코리아)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-            <!-- ******************************************************** FEED *********************************************************** -->
+        <section class="buy_product_wrap">
+            <img src="images/buy.png" alt="상품구매방법 Step1.이벤트응모 Step2.당첨여부확인 Step3.주문과결제 Step4.구매상품수령">
+        </section>
 
-            <section class="feed_save_area">
-                <p class="feed_save_txt">
-                    2020년 오잉의 회원이 되어 줘서 고맙고<br>
-                    지난 해도 함께 해줘서 고마워요 <img class="emoticon" src="images/event/wink.png" alt="윙크하며 웃는 이모티콘"><br>
-                    새해에도 여러분들의 다양한 기록을 기다립니다! 항상 고맙습니다 &#58;&#41;
-                </p>
+        <section class="event_notice_wrap">
+            <h1 class="event_notice_title">이벤트 유의사항</h1>
+            <ul class="event_notice_list_area">
+                <li>본 이벤트는 오잉 회원 대상으로 진행되며 상품 응모는 1인 한번만 가능합니다.</li>
+                <li>본 이벤트는 해당 상품 브랜드의 행사와 무관합니다.</li>
+                <li>본 이벤트는 추첨을 통해 진행되며 당첨자는 응모기간 종료후 2일 이내 개별 문자로 연락 드립니다.</li>
+                <li>당첨자 추첨은 랜덤방식으로 추첨되나 타SNS에 공유한 응모자 중 랜덤으로 7명, 그외 응모자 중 3명을 추첨합니다.</li>
+                <li>14세미만의 이용자는 법정대리인의 동의하에 구매가 가능합니다.</li>
+                <li>세무신고를 위해 당첨자에게는 개인정보를 요청하게 되며 제세공과금은 오잉미디어에서 부담합니다.</li>
+                <li>한 회원이 여러 개의 ID를 통해 주문한 상품은 대상에서 제외됩니다.</li>
+                <li>비정상적인 방법으로 상품을 구매할 경우 구매가 취소 될 수 있습니다.</li>
+                <li>고객 사정으로 당첨 문자를 삭제하였거나, 스팸문자로 등록된 경우 재발송 불가합니다.</li>
+            </ul>
+        </section>
 
-                <a id="button_save" href="#">
-                    <p>
-                        <strong>S A V E</strong><br>
-                        내 피드에 저장하기
+        <section class="delivery_info_wrap">
+            <h1 class="delivery_info_title">배송/교환/반품안내</h1>
+
+            <div class="delivery_info_sub_title_area">
+                <div class="delivery_info_sub_title">배송정보</div>
+                <div class="delivery_info_sub_title_line"></div>
+            </div>
+            <table class="delivery_info_table">
+                <tr>
+                    <th>- 배송방법</th>
+                    <td>우체국택배</td>
+                </tr>
+                <tr>
+                    <th>- 배송비</th>
+                    <td>무료배송</td>
+                </tr>
+                <tr>
+                    <th>- 배송기간</th>
+                    <td>
+                        주문 및 결제 완료 후, 3-4일 이내 도착 도서 산간 지역 등은 하루가 더 소요될 수 있습니다. 천재지변, 물량 수급 변동 등 예외적인 사유 발생 시, 다소 지 연될 수 있는 점 양해 부탁드립니다.
+                    </td>
+                </tr>
+            </table>
+
+            <div class="delivery_info_sub_title_area">
+                <div class="delivery_info_sub_title">교환/반품 안내</div>
+                <div class="delivery_info_sub_title_line"></div>
+            </div>
+            <table class="delivery_info_table">
+                <tr>
+                    <th>- 교환/반품 비용</th>
+                    <td>
+                        5,000원<br>
+                        - 단, 고객 변심의 경우에만 발생
+                    </td>
+                </tr>
+                <tr>
+                    <th>- 교환/반품 신청<br>&nbsp;&nbsp;&nbsp;기준일</th>
+                    <td>
+                        <ul class="delivery_info_list">
+                            <li>단순변심에 의한 상품의 교환/반품은 제품 수령 후 30일 이 내까지, 교환/반품 제한사항에 해당하지 않는 경우에만 가능 (교환/반품 비용 고객부담)</li>
+                            <li>상품의 내용이 표시·광고의 내용과 다른 경우에는 상품을 수령한 날부터 3개월 이내, 그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내에 청약철회 가능</li>
+                        </ul>
+
+                    </td>
+                </tr>
+            </table>
+
+            <div class="delivery_info_sub_title_area">
+                <div class="delivery_info_sub_title">교환/반품 제한사항</div>
+                <div class="delivery_info_sub_title_line"></div>
+            </div>
+            <table class="delivery_info_table">
+                <tr>
+                    <td>
+                        <ul class="delivery_info_list">
+                            <li>상품 포장을 개봉하여 사용 또는 설치 완료되어 상품의 가치가 훼손된 경우 (단, 내용 확인을 위한 포장 개봉의 경우는 예외)</li>
+                            <li>고객의 사용, 시간경과, 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우</li>
+                            <li>제조사의 사정 (신모델 출시 등) 및 부품 가격 변동 등에 의해 무료 교환/반품으로 요청하는 경우</li>
+                            <li>홀로그램 등을 분리, 분실, 훼손하여 상품의 가치가 현저히 감소하여 재판매가 불가할 경우</li>
+                            <li>설치 또는 사용하여 재판매가 어려운 경우</li>
+                            <li>상품의 시리얼 넘버 유출로 내장된 소프트웨어의 가치가 감소한 경우</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>- A/S 안내</b><br>
+                        본 제품은 애플 코리아 정품으로 애플 AS 규정을 따릅니다. 흠집, 찍힘 등 외관상의 하자는 서비스센터에서도 제품불량으로 인한 교환/반품 사유가 되지 않습니다. 판매자와 구매자는 임의로 불량 판정을 할 수 없으며, 초기 불량 및 사용 중 불량 발생 시 가까운 정식 서비스센터를 방문하여 제품 점검 후 교환 및 A/S 처리를 받아야합니다. (서비스 센터 방문 불가 등의 사유로 반품/환불은 불가합니다.)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        소비자가 전자상거래등에서 소비자 보호에 관한 법률 제 17조 제1항 또는 제3항에 따라 청약철회를 하고 동법 제 18 조 제1항 에 따라 청약철회한 물품을 판매자에게 반환하였음에도 불구 하고 결제 대금의 환급이 3영업일을 넘게 지연된 경우, 소비자 는 전자상거래등에서 소비자보호에 관한 법률 제18조 제2항 및 동법 시행령 제21조 2에 따라 지연일수에 대하여 전상법 시행령으로 정하는 이율을 곱하여 산정한 지연이자(“지연배상금”)를 신청할 수 있습니다. 아울러, 반품 및 결제대금의 환급신청은 service@ohing.net을 통해 하실 수 있습니다.
+                    </td>
+                </tr>
+            </table>
+
+            <div class="delivery_info_sub_title_area">
+                <div class="delivery_info_sub_title">판매자 정보</div>
+                <div class="delivery_info_sub_title_line"></div>
+            </div>
+            <table class="delivery_info_table">
+                <tr>
+                    <th>- 판매자명</th>
+                    <td>
+                        오잉미디어
+                    </td>
+                </tr>
+                <tr>
+                    <th>- 대표이사</th>
+                    <td>
+                        김민구
+                    </td>
+                </tr>
+                <tr>
+                    <th>- 연락처</th>
+                    <td>
+                        070-4010-5552 / service@ohing.net
+                    </td>
+                </tr>
+                <tr>
+                    <th>- 사업자등록번호</th>
+                    <td>
+                        234-87-01001
+                    </td>
+                </tr>
+                <tr>
+                    <th>- 통신판매업신고</th>
+                    <td>
+                        내용추가요망
+                    </td>
+                </tr>
+                <tr>
+                    <th>- 영업소재지</th>
+                    <td>
+                        영업소재지 : 서울특별시 강남구 테헤란로 87길 도심공항타워 24층
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        ※ 미성년자가 체결한 계약은 법정대리인이 동의하지 않는 경우 본인 또는 법정대리인이 취소할 수 있습니다.
+                    </td>
+                </tr>
+            </table>
+
+            <div class="delivery_info_sub_title_area">
+                <div class="delivery_info_sub_title">상품인증 정보</div>
+                <div class="delivery_info_sub_title_line"></div>
+            </div>
+            <table class="delivery_info_table">
+                <tr>
+                    <th><img class="kc_mark" src="images/mark.png" alt="KC인증마크 심볼"></th>
+                    <td>
+                        <b>방송통신기자재 적합성 평가 대상 :<br>R-R-APL-A2190</b>
+                        <p>
+                            전파환경 및 방송통신망 등에 위해를 줄 우려가 있는 기자재와 중대한 전자파장해를 주거나 전자파로부터 정상적인 동작을 방해받을 정도의 영향을 받는 기자재에 대한 기술수준 및 전자파 인체보호기준 등에 대한 적합 여부 평가
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th><img class="kc_mark" src="images/mark.png" alt="KC인증마크 심볼"></th>
+                    <td>
+                        <b>방송통신기자재 적합성 평가 대상 :<br>R-C-APL-A2083</b>
+                        <p>
+                            전파환경 및 방송통신망 등에 위해를 줄 우려가 있는 기자재와 중대한 전자파장해를 주거나 전자파로부터 정상적인 동작을 방해받을 정도의 영향을 받는 기자재에 대한 기술수준 및 전자파 인체보호기준 등에 대한 적합 여부 평가
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th><img class="kc_mark" src="images/mark.png" alt="KC인증마크 심볼"></th>
+                    <td>
+                        <b>방송통신기자재 적합성 평가 대상 :<br>R-C-APL-A2084</b>
+                        <p>
+                            전파환경 및 방송통신망 등에 위해를 줄 우려가 있는 기자재와 중대한 전자파장해를 주거나 전자파로부터 정상적인 동작을 방해받을 정도의 영향을 받는 기자재에 대한 기술수준 및 전자파 인체보호기준 등에 대한 적합 여부 평가
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <footer class="bottom_buttons_wrap">
+            <a class="button_share" href="#"><img src="images/share.png" alt="공유하기버튼"></a>
+            <a class="button_event" href="#">준비중</a>
+        </footer>
+
+        <!-- ************************************************** POPUP ***************************************************************-->
+
+        <!-- APPLY -->
+
+        <div class="popup" id="popup_apply">
+            <div class="popup_area">
+                <a href="#" class="button_x"><img src="images/button_x.png" alt="닫기버튼"></a>
+                <h1 class="popup_title">응 모 하 기</h1>
+                <div class="popup_user_info_area">
+                    <p class="user_title">
+                        오잉아이디<br>
+                        이름<br>
+                        연락처
                     </p>
-                </a>
-            </section>
-<!--
-            <section class="feed_txt_area">
-                <p class="feed_txt">
-                    버튼을 클릭하면 리포트결과가 내 피드에 저장됩니다.<br>
-                    저장 완료 하고 기프티콘 받아가세요! 참여해주신 분들 중 추첨을<br>
-                    통해 총 10명에게 배라 기프티콘을 드립니다.
+                    <div class="user_data">
+                        <p class="user_id">ohing</p>
+                        <p class="user_name">김오잉</p>
+                        <p class="user_contact">010-1234-1234</p>
+                        <a href="#" class="user_contact_change" id="user_contact_change">연락처 변경 ▶</a>
+                    </div>
+                </div>
+                <p class="popup_contents">
+                    응모하신 분 중 추첨을 통해<br>10명에게 구매기회를 드립니다.<br>(SNS에 공유하면 당첨확률 UP!)
                 </p>
-            </section>
--->
-
-            <!-- ******************************************************** EVENT ATTENTION *********************************************************** -->
-
-            <section class="event_attention_area">
-                <h1 class="event_attention_title">꼭! 확인하세요.</h1>
-                <ul class="event_attention_txt">
-                    <li>2020 숫자로 보는 나의 오잉은? 데이터는 2020. 01.01~2020.12.31 기간 동안 사용자의 오잉 활동 이력 분석으로 요약됩니다.</li>
-                    <li>데이터 이력이 부족한 경우 2020 숫자로 보는 나의 오잉은? 확인이 어렵습니다.</li>
-                    <li>이벤트 참여 등 기타 문의사항은 service@ohing.net 을 통해 문의 부탁 드립니다.</li>
-                    <li>당첨자 발표는 이벤트 종료 후 @ohing_official 에서 확인하실 수 있으며, 당첨자에게는 개별 연락 드릴 예정입니다.</li>
+                <ul class="popup_notice">
+                    <li>연락처 정보를 꼭 확인해주세요.</li>
+                    <li>당첨자는 개별 연락드리며 본페이지에서도<br>확인할 수 있습니다.</li>
+                    <li>문의사항은 service@ohing.net으로 메일보내주세요.</li>
                 </ul>
-            </section>
+                <div class="popup_buttons_area">
+                    <a class="button_next popup_button red" href="#">다음</a>
+                    <a class="button_close popup_button" href="#">닫기</a>
+                </div>
+            </div>
+            <p></p>
         </div>
-        <!-- //////////////////////////////////////////////// EVENT CONTENTS END ////////////////////////////////////////////////////////////////// -->
-    </div>
 
-    <script>
-    </script>
+        <!-- APPLY END -->
+
+        <div class="popup" id="popup_apply_end">
+            <div class="popup_area">
+                <a href="#" class="button_x"><img src="images/button_x.png" alt="닫기버튼"></a>
+                <h1 class="popup_title">응 모 완 료</h1>
+                <div class="popup_user_info_area">
+                    <p class="user_title">
+                        오잉아이디<br>
+                        이름<br>
+                        연락처
+                    </p>
+                    <div class="user_data">
+                        <p class="user_id">ohing</p>
+                        <p class="user_name">김오잉</p>
+                        <p class="user_contact">010-1234-1234</p>
+                        <p href="#" class="user_contact_change">&nbsp;</p>
+                    </div>
+                </div>
+                <p class="popup_contents">
+                    감사합니다. 응모가 완료되었습니다.<br>
+                    행운을 빌어요!<br>
+                    (SNS에 공유하면 당첨확률 UP!)
+                </p>
+                <ul class="popup_notice">
+                    <li>당첨자는 개별 연락드리며 당첨여부는<br>3월 16일 11시부터 본 페이지에서 확인할수 있어요.</li>
+                    <li>문의사항은 service@ohing.net으로 메일보내주세요.<br><br></li>
+                </ul>
+                <div class="popup_buttons_area">
+                    <a class="button_close popup_button width_100" href="#">닫기</a>
+                </div>
+            </div>
+            <p></p>
+        </div>
+
+        <!-- APPLY WIN -->
+
+        <div class="popup" id="popup_apply_win">
+            <div class="popup_area">
+                <a href="#" class="button_x"><img src="images/button_x.png" alt="닫기버튼"></a>
+                <h1 class="popup_title">당 첨 확 인</h1>
+                <div class="popup_user_info_area">
+                    <p class="popup_txt">축하합니다!<br>당첨되었습니다!!</p>
+                </div>
+                <div class="popup_contents">
+                    <b>응모상품 : </b>에어팟 프로 1대<br>
+                    <p><b>주문가능시간 : </b>3월16일 11:00 ~ 3월19일 11:00</p><br>단, 주문가능시간이 지나면<br>구매포기로 간주하고 당첨이 취소되니<br><strong>꼭 기간내에 주문 해주세요.</strong>
+                </div>
+                <div class="popup_buttons_area">
+                    <a class="button_order popup_button red" href="#">지금 주문하기</a>
+                    <a class="button_close popup_button" href="#">나중에</a>
+                </div>
+            </div>
+            <p></p>
+        </div>
+
+        <!-- APPLY FAIL -->
+
+        <div class="popup" id="popup_apply_fail">
+            <div class="popup_area">
+                <a href="#" class="button_x"><img src="images/button_x.png" alt="닫기버튼"></a>
+                <h1 class="popup_title">당 첨 확 인</h1>
+                <div class="popup_user_info_area">
+                    <p class="popup_txt">아쉽네요<br>당첨되지 않았습니다.</p>
+                </div>
+                <div class="popup_contents">
+                    다음에 더 좋은 핫딜을 준비하도록<br>노력하겠습니다.<br>기대해주세요!
+                </div>
+                <div class="popup_buttons_area">
+                    <a class="button_close popup_button width_100" href="#">닫기</a>
+                </div>
+            </div>
+            <p></p>
+        </div>
+
+        <!-- PAYMENT -->
+
+        <div class="popup payment" id="popup_order" style="display: block;">
+            <div class="popup_area">
+                <a href="#" class="button_x"><img src="images/button_x.png" alt="닫기버튼"></a>
+                <h1 class="popup_title">주 문 하 기</h1>
+                <div class="popup_user_info_area">
+                    <p class="popup_contents_title">주문상품</p>
+                    <div class="popup_contents_box">
+                        <p class="popup_contents_name">
+                            상품<br>
+                            수량<br>
+                            가격
+                        </p>
+                        <p class="popup_contents_result">
+                            애플 에어팟 프로<br>
+                            1개<br>
+                            52,000원
+                        </p>
+                    </div>
+                </div>
+                <div class="popup_user_info_area">
+                    <p class="popup_contents_title">주문자정보</p>
+                    <div class="popup_contents_box">
+                        <p class="popup_contents_name">
+                            오잉아이디<br>
+                            이름<br>
+                            연락처
+                        </p>
+                        <div class="popup_contents_result">
+                            <p class="user_id">ohing</p>
+                            <p class="user_name">김오잉</p>
+                            <p class="user_contact">010-1234-1234</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_user_info_area">
+                    <p class="popup_contents_title">배송지</p>
+                    <div class="popup_contents_box">
+                        <p class="popup_contents_name">
+                            이름<br>
+                            연락처<br>
+                            주소
+                        </p>
+                        <div class="popup_contents_result">
+                            <input type="text" id="input_user_name" placeholder="이름을 입력해 주세요.">
+                            <input type="text" id="input_user_contact" placeholder="연락처를 입력해 주세요.">
+                            <input type="text" id="input_user_address" placeholder="주소를 입력해주세요.">
+                            <input type="text" id="input_user_address_2" placeholder="상세주소를 입력해주세요.">
+                        </div>
+                    </div>
+                </div>
+                <input type="checkbox" id="personal_info_aree" name="personal_info_aree" value="agree"><label class="personal_info_aree_label" for="personal_info_aree"></label><a href="#" class="button_personal_info_agree">개인정보 수집 동의 (필수)</a>
+                <ul class="popup_notice">
+                    <li>연락처와 주소를 정확하게 입력해주세요.</li>
+                    <li>잘못 입력한 경우 재발송 할 수 없으니 맞게 가입하였는지 꼭 확인해주세요!</li>
+                    <li>Payapp을 통해 결제되며, 결제업체명은 (주)유디아이디로 표시됩니다.</li>
+                </ul>
+                <div class="popup_buttons_area">
+                    <a class="button_payment popup_button red" href="#">결제하기</a>
+                    <a class="button_close popup_button" href="#">취소</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAYMENT END -->
+
+        <div class="popup payment" id="popup_payment_end">
+            <div class="popup_area">
+                <a href="#" class="button_x"><img src="images/button_x.png" alt="닫기버튼"></a>
+                <h1 class="popup_title">결 제 완 료</h1>
+                <div class="popup_user_info_area">
+                    <p class="popup_ment">결제가 정상적으로 완료되었습니다.</p>
+                    <div class="pay_data">
+                        <p class="user_title">
+                            결제금액 :<br>
+                            결제일시 :
+                        </p>
+                        <div class="user_data">
+                            <p class="payment_price">52,000원</p>
+                            <p class="payment_date">2021년 3월 19일 10시 21분</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_user_info_area">
+                    <p class="popup_contents_title">주문상품</p>
+                    <div class="popup_contents_box">
+                        <p class="popup_contents_name">
+                            상품<br>
+                            수량<br>
+                            가격
+                        </p>
+                        <p class="popup_contents_result">
+                            애플 에어팟 프로<br>
+                            1개<br>
+                            52,000원
+                        </p>
+                    </div>
+                </div>
+                <div class="popup_user_info_area">
+                    <p class="popup_contents_title">주문자정보</p>
+                    <div class="popup_contents_box">
+                        <p class="popup_contents_name">
+                            오잉아이디<br>
+                            이름<br>
+                            연락처
+                        </p>
+                        <div class="popup_contents_result">
+                            <p class="user_id">ohing</p>
+                            <p class="user_name">김오잉</p>
+                            <p class="user_contact">010-1234-1234</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup_user_info_area">
+                    <p class="popup_contents_title">배송지</p>
+                    <div class="popup_contents_box">
+                        <p class="popup_contents_name">
+                            이름<br>
+                            연락처<br>
+                            주소
+                        </p>
+                        <div class="popup_contents_result">
+                            <p class="user_name">받는이</p>
+                            <p class="user_contact">010-1234-1234</p>
+                            <p class="user_address">(12345) 서울특별시 서울동 서울아파트 101동 101호</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="popup_notice">
+                    <li>문의사항은 service@ohing.net으로 메일보내 주세요.</li>
+                    <li>Payapp을 통해 결제되며, 결제업체명은 (주)유디아이디로 표시됩니다.</li>
+                </ul>
+                <div class="popup_buttons_area">
+                    <a class="button_close popup_button width_100" href="#">닫기</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PREPARING -->
+
+        <div class="popup" id="popup_preparing">
+            <div class="popup_area">
+                <a href="#" class="button_x"><img src="images/button_x.png" alt="닫기버튼"></a>
+                <h1 class="popup_title">준 비 중</h1>
+                <div class="popup_user_info_area">
+                    <p class="popup_txt"> 3월 10일 11:00AM<br>오픈됩니다!</p>
+                </div>
+                <div class="popup_contents">
+                    다시 와주실거죠?<br>
+                    미리미리 공유하고<br>응모하면 당첨확률 UP!
+                </div>
+                <div class="popup_buttons_area">
+                    <a class="button_close popup_button width_100" href="#">닫기</a>
+                </div>
+            </div>
+            <p></p>
+        </div>
+
+        <!-- APPLY CLOSE -->
+
+        <div class="popup" id="popup_apply_close">
+            <div class="popup_area">
+                <a href="#" class="button_x"><img src="images/button_x.png" alt="닫기버튼"></a>
+                <h1 class="popup_title">응모기간 종료</h1>
+                <div class="popup_user_info_area">
+                    <p class="popup_txt">응모기간이<br>종료되었습니다.</p>
+                </div>
+
+                <div class="popup_buttons_area">
+                    <a class="button_close popup_button width_100" href="#">닫기</a>
+                </div>
+            </div>
+            <p></p>
+        </div>
+
+        <!-- PERSONAL INFO -->
+
+        <div class="popup" id="popup_personal_info">
+            <div class="popup_area">
+                <a href="#" class="button_x"><img src="images/button_x.png" alt="닫기버튼"></a>
+                <p class="popup_personal_info">
+                    [개인정보 수집 이용에 대한 동의]<br>
+                    1.개인정보를 제공받는 자 : 오잉미디어<br>
+                    2.개인정보를 제공받는 자의 개인정보 이용 목적 : 상품 및 경품(서비스) 배송 (전송), 반품, 환불, 고객상담 등 정보통 신서비스제공계약 및 전자상거래(통신판 매)계약의 이행을 위해 필요한 업무의 처리<br>
+                    3.제공하는 개인정보의 항목 : ID, 성명, 전화번호, 휴대전화번호, 배송지 주소<br>
+                    4.개인정보를 제공받는 자의 개인정보 보유 및 이용 기간 : 이벤트가 종료 된 후 1개월<br>
+                    5.동의를 거부할 수 있으며, 동의 거부시 이벤트에 참여할 수 없습니다.
+                </p>
+                <div class="popup_buttons_area">
+                    <a class="button_close popup_button width_100" href="#">닫기</a>
+                </div>
+            </div>
+            <p></p>
+        </div>
+
+
+    </div>
 </body>
 
 </html>
