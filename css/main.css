@@ -109,11 +109,14 @@ input[id="personal_info_aree"]:checked + label {background: #fff url("../images/
 #popup_apply_close > .popup_area {height: 230px;}
 #popup_apply_close > .popup_area > .popup_buttons_area {padding-top: 10px;}
 
+#popup_personal_info > .popup_area {height: auto;}
 .popup_personal_info {background-color: #fff; padding: 20px; margin-top: 30px; line-height: 1.4; font-size: 14px;}
+
+#popup_postal_code {display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background-color: #fff; z-index: 1000;}
 
 /*--------------------------------- 팝업창들 보이기 - display:block / 안보이기 - none -----------------------------------------*/
 
-#popup_apply {display: none;} /*응모하기 팝업*/
+#popup_apply {height: auto;} /*응모하기 팝업*/
 
 #popup_apply_end {display: none;} /*응모완료 팝업*/
 
@@ -125,7 +128,7 @@ input[id="personal_info_aree"]:checked + label {background: #fff url("../images/
 
 #popup_payment_end {display: none;} /*결제완료 팝업*/
 
-#popup_apply_close {display: none;} /*응모기간종료 팝업*/
+#popup_apply_close {display: block;} /*응모기간종료 팝업*/
 
 #popup_preparing {display: none;} /*준비중 팝업*/
 
